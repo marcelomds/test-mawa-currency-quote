@@ -2,16 +2,14 @@
 
 @section('title', 'Cotar Moeda')
 
-@section('content_header')
-    <h3>Cotação de Moeda</h3>
-@stop
-
 @section('content')
-    @include('sweetalert::alert')
 
+    @include('layouts.error')
     <div class="row">
         <div class="col-12">
             <div class="card">
+                <h3 class="card-header text-center">Cotação de Moeda</h3>
+
                 <form action="{{ route('quotes.store') }}" method="POST" id="form-quote">
                     @csrf
                     <input type="hidden" name="user_id" id="user_id" value="{{ auth()->user()->id }}">
@@ -20,8 +18,9 @@
                             <div class="col-xs-12 col-md-2">
                                 <div class="form-group">
                                     <label for="price">Valor</label>
-                                    <input type="text"
+                                    <input type="number"
                                            name="price"
+                                           min="1"
                                            required
                                            class="form-control"
                                            id="price"
@@ -35,9 +34,11 @@
                                     <label for="currency_from">Converter de: </label>
                                     <select name="currency_from" id="currency_from" class="form-control" required>
                                         <option disabled selected>-- Selecione --</option>
-                                        <option value="Dólar Americano (USD)">Dólar Americano (USD)</option>
-                                        <option value="Euro (EUR)">Euro (EUR)</option>
-                                        <option value="Real Brasileiro (BRL)">Real Brasileiro (BRL)</option>
+{{--                                        <option value="Bitcoin (BTC)">Bitcoin (BTC)</option>--}}
+{{--                                        <option value="Dólar Americano (USD)">Dólar Americano (USD)</option>--}}
+{{--                                        <option value="Euro (EUR)">Euro (EUR)</option>--}}
+{{--                                        <option value="Peso Argentino (ARS)">Peso Argentino (ARS)</option>--}}
+{{--                                        <option value="Real Brasileiro (BRL)">Real Brasileiro (BRL)</option>--}}
                                     </select>
                                 </div>
                             </div>

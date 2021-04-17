@@ -4,6 +4,8 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Repositories\User\UserRepository;
+use App\Http\Requests\User\UserRequest;
+use App\Http\Requests\User\UserRequest as UserRequestAlias;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -29,11 +31,11 @@ class UserController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param UserRequest $request
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, int $id)
+    public function update(UserRequest $request, int $id)
     {
         try {
             $this->repository->update($request->only('name', 'email'), $id);

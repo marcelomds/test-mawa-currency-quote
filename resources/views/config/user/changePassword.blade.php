@@ -2,15 +2,12 @@
 
 @section('title', 'Alterar Senha')
 
-@section('content_header')
-    <h2>Alterar Senha</h2>
-@stop
-
 @section('content')
     @include('sweetalert::alert')
 
     <div class="col-6">
         <div class="card">
+            <h3 class="card-header text-center">Alterar Senha</h3>
             <div class="card-body">
                 <form action="{{ route('user.password.change', $user) }}" method="POST" autocomplete="off">
                     @csrf
@@ -54,7 +51,7 @@
 
                     <div class="row">
                         <div class="form-group col-12">
-                            <button class="btn btn-primary btn-md mb-0" type="submit">Atualizar</button>
+                            <button class="btn btn-info btn-md mb-0" type="submit">Atualizar</button>
                         </div>
                     </div>
                 </form>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Quote;
 
 use App\Http\Controllers\Controller;
 use App\Http\Repositories\Quote\QuoteRepository;
+use App\Http\Requests\Quote\QuoteRequest;
 use App\Models\Quote;
 use Illuminate\Http\Request;
 
@@ -41,10 +42,10 @@ class QuoteController extends Controller
 
 
     /**
-     * @param Request $request
+     * @param QuoteRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(QuoteRequest $request)
     {
         try {
             $this->repository->store($request->except('_token'));
@@ -57,7 +58,6 @@ class QuoteController extends Controller
 
         toast('Registrado com Sucesso', 'success');
 
-        return redirect()
-            ->back();
+        return redirect()->route('quotes.index');
     }
 }

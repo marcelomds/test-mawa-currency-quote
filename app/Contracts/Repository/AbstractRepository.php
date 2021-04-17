@@ -29,7 +29,9 @@ abstract class AbstractRepository
      */
     public function all()
     {
-        return $this->getModel()::where('user_id', auth()->user()->id)->paginate();
+        return $this->getModel()::where('user_id', auth()->user()->id)
+            ->orderBy('created_at', 'DESC')
+            ->paginate(7);
     }
 
     /**

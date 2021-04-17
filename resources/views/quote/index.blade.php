@@ -2,15 +2,13 @@
 
 @section('title', 'Histórico de Cotações')
 
-@section('content_header')
-    <h3>Histórico de Cotações</h3>
-@stop
-
 @section('content')
+    @include('sweetalert::alert')
 
     <div class="row">
         <div class="col-12">
             <div class="card">
+                <h3 class="card-header text-center">Histórico de Cotações</h3>
                 <div class="card-body">
                     <table class="table table-hover table-striped">
                         <thead>

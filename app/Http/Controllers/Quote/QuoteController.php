@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Quote;
 use App\Http\Controllers\Controller;
 use App\Http\Repositories\Quote\QuoteRepository;
 use App\Http\Requests\Quote\QuoteRequest;
-use App\Models\Quote;
-use Illuminate\Http\Request;
 
 
 class QuoteController extends Controller
@@ -23,11 +21,15 @@ class QuoteController extends Controller
     }
 
     /**
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function index()
     {
-        $quotes = $this->repository->all();
+        try {
+            $quotes = $this->repository->all();
+        } catch (\Exception $e) {
+            return redirect('/login');
+        }
 
         return view('quote.index', compact('quotes'));
     }
@@ -39,7 +41,6 @@ class QuoteController extends Controller
     {
         return view('quote.create');
     }
-
 
     /**
      * @param QuoteRequest $request

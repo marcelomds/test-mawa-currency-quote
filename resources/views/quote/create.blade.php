@@ -34,11 +34,6 @@
                                     <label for="currency_from">Converter de: </label>
                                     <select name="currency_from" id="currency_from" class="form-control" required>
                                         <option disabled selected>-- Selecione --</option>
-{{--                                        <option value="Bitcoin (BTC)">Bitcoin (BTC)</option>--}}
-{{--                                        <option value="Dólar Americano (USD)">Dólar Americano (USD)</option>--}}
-{{--                                        <option value="Euro (EUR)">Euro (EUR)</option>--}}
-{{--                                        <option value="Peso Argentino (ARS)">Peso Argentino (ARS)</option>--}}
-{{--                                        <option value="Real Brasileiro (BRL)">Real Brasileiro (BRL)</option>--}}
                                     </select>
                                 </div>
                             </div>

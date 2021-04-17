@@ -1,6 +1,5 @@
-// Eventos Cotação Moedas
-
 $(document).ready(function () {
+// Eventos Cotação Moedas
 
     // Listar TODAS as MOEDAS
     $.ajax({
@@ -33,7 +32,7 @@ $(document).ready(function () {
 
                     for (var i = 0; i < selectValue.length; i++) {
 
-                        let optionValue = `<option value="${selectValue[i]}">`+ `${selectText[i]} (${selectValue[i]})` + "</option>";
+                        let optionValue = `<option value="${selectText[i]} (${selectValue[i]})">`+ `${selectText[i]} (${selectValue[i]})` + "</option>";
 
                         $('#currency_from').append(optionValue);
                     }
@@ -117,15 +116,14 @@ $(document).ready(function () {
 
                 // Calcular Conversão
                 priceResult = price * lowValue;
-
                 // Mostrar Campos com RESULTADOS
+
                 $('#card-currency-result').show()
                 $('#price_result').val(priceResult.toFixed(4));
                 $('#tag-currency_from').html(currencyFromText);
                 $('#tag-price').html(price);
                 $('#tag-currency_to').html(currencyToText);
                 $('#tag-price_result').html(priceResult.toFixed(4));
-
             },
             error: (error) => {
                 $('#error-currency-notFound').show();
@@ -135,7 +133,6 @@ $(document).ready(function () {
             }
         })
     });
-
 
     // Limpar Campos no Formuçário
     $('#btn-clear-fields').click(() => {

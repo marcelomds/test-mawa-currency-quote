@@ -8,7 +8,17 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <h3 class="card-header text-center">Histórico de Cotações</h3>
+                <div class="card-header">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-10">
+                            <h3 class="text-center">Histórico de Cotações</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="{{ route('quotes.create') }}" class="btn btn-info float-right" >
+                                <i class="fas fa-plus-square"></i> Nova Cotação</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="card-body">
                     <table class="table table-hover table-striped">
                         <thead>

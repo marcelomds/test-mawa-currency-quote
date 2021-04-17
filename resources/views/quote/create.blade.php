@@ -8,7 +8,17 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <h3 class="card-header text-center">Cotação de Moeda</h3>
+                <div class="card-header">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-10">
+                            <h3 class="text-center">Cotação de Moeda</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="{{ route('quotes.index') }}" class="btn btn-info float-right" >
+                                <i class="fas fa-list"></i> Histórico</a>
+                        </div>
+                    </div>
+                </div>
 
                 <form action="{{ route('quotes.store') }}" method="POST" id="form-quote">
                     @csrf

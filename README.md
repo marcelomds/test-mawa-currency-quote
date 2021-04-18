@@ -21,5 +21,6 @@ $ php artisan serve
 ```
 ## Para Acessar Login Inicial
 
-    Login: admin@email.com
-    senha: 123456789
+   - Login:  admin@email.com
+    
+   - Senha: 123456789

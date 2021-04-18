@@ -15,14 +15,14 @@ $ cd test_mawa_currency_quote
 $ composer install
 $ cp .env.example .env
 
- -- Configurar Banco de Dados no Arquivo .env
+ ------------ Configurar Banco de Dados no Arquivo .env ------------
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE=your_database_name
     DB_USERNAME=your_database_user
     DB_PASSWORD=your_database_password
-  --  
+ -------------------------------------------------------------------
 
 $ php artisan key:generate
 $ php artisan migrate #antes de rodar este comando verifique sua configuracao com banco em .env

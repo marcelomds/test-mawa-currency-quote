@@ -1,18 +1,12 @@
-## Gerenciador-de-Estabelecimentos
-Teste realizado num processo de seleção da empresa FortBrasil
+# Cotação de Moedas - Painel Administrativo
 
-Clonar o Projeto
+## Teste realizado para a empresa: Mawa Post
 
-    git clone https://github.com/marcelomds/Gerenciador-de-Estabelecimentos
+## O que é este projeto?
+- O projeto tem como objetivo realizar a cotação de moedas utilizando uma API: https://docs.awesomeapi.com.br/api-de-moedas e registrar no banco de dados as cotações.
 
-# FRONT-END em VueJS
-digite cd manages_establishments
-
-    npm install && npm run dev
-
---------------------------------------------------------------
-
-# API - PHP / Laravel
+- Através de um Painel Admnistrativo, é possível acessar todo o histórico de cotações por usuário;
+- Sistema de Autenticação com Login / Novo Registro de Usuário;
 
 ## Acessar a pasta da Api
 

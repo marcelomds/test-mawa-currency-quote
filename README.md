@@ -15,6 +15,7 @@ $ cd test_mawa_currency_quote
 $ composer install
 $ cp .env.example .env
 
+ - Configuração do Banco de Dados no Arquivo .env
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306

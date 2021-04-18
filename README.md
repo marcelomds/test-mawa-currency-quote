@@ -6,7 +6,7 @@
 - O projeto tem como objetivo realizar a cotação de moedas utilizando uma API: https://docs.awesomeapi.com.br/api-de-moedas e registrar no banco de dados as cotações.
 
 - Através de um Painel Admnistrativo, é possível acessar todo o histórico de cotações por usuário;
-- Sistema de Autenticação com Login / Novo Registro de Usuário;
+- Sistema de Autenticação com Login / Novo Registro de Usuário / Configuração de Usuário (Alterar Senha / Dados de Perfil);
 
 ## Para rodar este projeto
 ```bash

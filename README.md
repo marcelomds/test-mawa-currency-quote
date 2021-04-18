@@ -11,7 +11,7 @@
 ## Para rodar este projeto
 ```bash
 $ git clone https://github.com/marcelomds/test-mawa-currency-quote.git
-$ cd laravel-blog
+$ cd test_mawa_currency_quote
 $ composer install
 $ cp .env.example .env
 $ php artisan key:generate

@@ -10,7 +10,7 @@
 
 ## Para rodar este projeto
 ```bash
-$ git clone https://github.com/fabiosperotto/laravel-blog
+$ git clone https://github.com/marcelomds/test-mawa-currency-quote.git
 $ cd laravel-blog
 $ composer install
 $ cp .env.example .env

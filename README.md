@@ -14,6 +14,14 @@ $ git clone https://github.com/marcelomds/test-mawa-currency-quote.git
 $ cd test_mawa_currency_quote
 $ composer install
 $ cp .env.example .env
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_database_name
+    DB_USERNAME=your_database_user
+    DB_PASSWORD=your_database_password
+
 $ php artisan key:generate
 $ php artisan migrate #antes de rodar este comando verifique sua configuracao com banco em .env
 $ php artisan db:seed #para gerar os seeders, dados de teste

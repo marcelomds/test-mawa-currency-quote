@@ -19,3 +19,7 @@ $ php artisan migrate #antes de rodar este comando verifique sua configuracao co
 $ php artisan serve
 $ php artisan db:seed #para gerar os seeders, dados de teste
 ```
+## Para Acessar Login Inicial
+
+    Login: admin@email.com
+    senha: 123456789
